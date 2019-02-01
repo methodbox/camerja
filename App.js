@@ -12,7 +12,7 @@ import {
 import GalleryScreen from './GalleryScreen';
 import isIPhoneX from 'react-native-is-iphonex';
 
-import { 
+import {
   Ionicons,
   MaterialIcons,
   Foundation,
@@ -149,7 +149,7 @@ export default class CameraScreen extends React.Component {
         pictureSizeId = pictureSizes.indexOf('High');
       } else {
         // returned array is sorted in ascending order - default size is the largest one
-        pictureSizeId = pictureSizes.length-1;
+        pictureSizeId = pictureSizes.length - 1;
       }
       this.setState({ pictureSizes, pictureSizeId, pictureSize: pictureSizes[pictureSizeId] });
     }
@@ -164,7 +164,7 @@ export default class CameraScreen extends React.Component {
     if (newId >= length) {
       newId = 0;
     } else if (newId < 0) {
-      newId = length -1;
+      newId = length - 1;
     }
     this.setState({ pictureSize: this.state.pictureSizes[newId], pictureSizeId: newId });
   }
@@ -227,24 +227,24 @@ export default class CameraScreen extends React.Component {
     );
   }
 
-  renderFaces = () => 
+  renderFaces = () =>
     <View style={styles.facesContainer} pointerEvents="none">
       {this.state.faces.map(this.renderFace)}
     </View>
 
-  renderLandmarks = () => 
+  renderLandmarks = () =>
     <View style={styles.facesContainer} pointerEvents="none">
       {this.state.faces.map(this.renderLandmarksOfFace)}
     </View>
 
-  renderNoPermissions = () => 
+  renderNoPermissions = () =>
     <View style={styles.noPermissions}>
       <Text style={{ color: 'white' }}>
         Camera permissions not granted - cannot open camera preview.
       </Text>
     </View>
 
-  renderTopBar = () => 
+  renderTopBar = () =>
     <View
       style={styles.topBar}>
       <TouchableOpacity style={styles.toggleButton} onPress={this.toggleFacing}>
@@ -258,14 +258,14 @@ export default class CameraScreen extends React.Component {
       </TouchableOpacity>
       <TouchableOpacity style={styles.toggleButton} onPress={this.toggleFocus}>
         <Text style={[styles.autoFocusLabel, { color: this.state.autoFocus === 'on' ? "white" : "#6b6b6b" }]}>AF</Text>
-      </TouchableOpacity>   
+      </TouchableOpacity>
     </View>
 
   renderBottomBar = () =>
     <View
       style={styles.bottomBar}>
       <TouchableOpacity style={styles.bottomButton} onPress={this.toggleMoreOptions}>
-        <Octicons name="kebab-horizontal" size={30} color="white"/>
+        <Octicons name="kebab-horizontal" size={30} color="white" />
       </TouchableOpacity>
       <View style={{ flex: 0.4 }}>
         <TouchableOpacity
@@ -274,11 +274,11 @@ export default class CameraScreen extends React.Component {
         >
           <Ionicons name="ios-radio-button-on" size={70} color="white" />
         </TouchableOpacity>
-      </View> 
+      </View>
       <TouchableOpacity style={styles.bottomButton} onPress={this.toggleView}>
         <View>
           <Foundation name="thumbnails" size={30} color="white" />
-          {this.state.newPhotos && <View style={styles.newPhotosDot}/>}
+          {this.state.newPhotos && <View style={styles.newPhotosDot} />}
         </View>
       </TouchableOpacity>
     </View>
@@ -288,10 +288,10 @@ export default class CameraScreen extends React.Component {
       <View style={styles.options}>
         <View style={styles.detectors}>
           <TouchableOpacity onPress={this.toggleFaceDetection}>
-            <MaterialIcons name="tag-faces" size={32} color={this.state.faceDetecting ? "white" : "#858585" } />
+            <MaterialIcons name="tag-faces" size={32} color={this.state.faceDetecting ? "white" : "#858585"} />
           </TouchableOpacity>
           <TouchableOpacity onPress={this.toggleBarcodeScanning}>
-            <MaterialCommunityIcons name="barcode-scan" size={32} color={this.state.barcodeScanning ? "white" : "#858585" } />
+            <MaterialCommunityIcons name="barcode-scan" size={32} color={this.state.barcodeScanning ? "white" : "#858585"} />
           </TouchableOpacity>
         </View>
 
@@ -302,16 +302,17 @@ export default class CameraScreen extends React.Component {
               <Ionicons name="md-arrow-dropleft" size={14} color="white" />
             </TouchableOpacity>
             <View style={styles.pictureSizeLabel}>
-              <Text style={{color: 'white'}}>{this.state.pictureSize}</Text>
+              <Text style={{ color: 'white' }}>{this.state.pictureSize}</Text>
             </View>
             <TouchableOpacity onPress={this.nextPictureSize} style={{ padding: 6 }}>
               <Ionicons name="md-arrow-dropright" size={14} color="white" />
             </TouchableOpacity>
           </View>
         </View>
-      </View> 
+      </View>
     );
-
+  //  This is the primary camera component
+  //  Modify this to adjust which features appear on the camera
   renderCamera = () =>
     (
       <View style={{ flex: 1 }}>
@@ -338,7 +339,7 @@ export default class CameraScreen extends React.Component {
             ],
           }}
           onBarCodeScanned={this.state.barcodeScanning ? this.onBarCodeScanned : undefined}
-          >
+        >
           {this.renderTopBar()}
           {this.renderBottomBar()}
         </Camera>
@@ -383,7 +384,7 @@ const styles = StyleSheet.create({
   },
   noPermissions: {
     flex: 1,
-    alignItems:'center',
+    alignItems: 'center',
     justifyContent: 'center',
     padding: 10,
   },
@@ -407,8 +408,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   bottomButton: {
-    flex: 0.3, 
-    height: 58, 
+    flex: 0.3,
+    height: 58,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -439,7 +440,7 @@ const styles = StyleSheet.create({
   },
   pictureQualityLabel: {
     fontSize: 10,
-    marginVertical: 3, 
+    marginVertical: 3,
     color: 'white'
   },
   pictureSizeContainer: {
