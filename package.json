@@ -13,7 +13,11 @@
     "react-native-is-iphonex": "^1.0.1"
   },
   "devDependencies": {
-    "babel-preset-expo": "^5.0.0"
+    "@types/expo": "^32.0.13",
+    "@types/react": "^16.8.17",
+    "@types/react-native": "^0.57.57",
+    "babel-preset-expo": "^5.0.0",
+    "typescript": "^3.4.5"
   },
   "private": true
 }
