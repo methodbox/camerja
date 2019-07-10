@@ -1,12 +1,13 @@
 {
   "expo": {
-    "name": "react-native-camera",
-    "slug": "react-native-camera",
+    "name": "expo sucks",
+    "slug": "fuckexpo",
     "privacy": "public",
-    "sdkVersion": "32.0.0",
+    "sdkVersion": "33.0.0",
     "platforms": [
       "ios",
-      "android"
+      "android",
+      "web"
     ],
     "version": "1.0.0",
     "orientation": "portrait",

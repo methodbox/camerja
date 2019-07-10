@@ -21,7 +21,7 @@ import { Ionicons, MaterialIcons, Foundation, MaterialCommunityIcons, Octicons }
 import { NavigationInjectedProps } from 'react-navigation';
 // @ts-ignore
 import GalleryScreen from './GalleryScreen';
-import { string } from 'prop-types';
+
 //  import Photo from './Photo';
 const landmarkSize = 2;
 
