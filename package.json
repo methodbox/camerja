@@ -7,17 +7,32 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "^32.0.0",
-    "react": "16.5.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
-    "react-native-is-iphonex": "^1.0.1"
+    "expo": "^33.0.0",
+    "@expo/vector-icons": "^10.0.1",
+    "expo-asset": "^5.0.0",
+    "expo-camera": "^5.0.1",
+    "expo-constants": "^5.0.1",
+    "expo-file-system": "^5.0.1",
+    "expo-font": "^5.0.0",
+    "expo-media-library": "^5.0.1",
+    "expo-permissions": "^5.0.1",
+    "react": "16.8.3",
+    "react-dom": "^16.8.6",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
+    "react-native-calendars": "^1.185.0",
+    "react-native-elements": "^1.1.0",
+    "react-native-web": "^0.11.4",
+    "react-navigation": "^3.11.0"
   },
   "devDependencies": {
     "@types/expo": "^32.0.13",
-    "@types/react": "^16.8.17",
-    "@types/react-native": "^0.57.57",
-    "babel-preset-expo": "^5.0.0",
-    "typescript": "^3.4.5"
+    "@types/react-native": "^0.57.60",
+    "babel-preset-expo": "^5.1.0",
+    "jest-expo": "^33.0.0",
+    "prettier-tslint": "^0.4.2",
+    "tslint": "^5.17.0",
+    "typescript": "^3.5.2",
+    "typescript-tslint-plugin": "^0.5.0"
   },
   "private": true
 }
